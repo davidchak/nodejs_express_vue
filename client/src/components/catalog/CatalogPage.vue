@@ -9,7 +9,7 @@
     <template v-slot:content>
       <div class="content__block">
         <div class="wrapper">
-          <span>Personal Page</span>
+          <span>Catalog</span>
         </div>
       </div>
     </template>
@@ -24,7 +24,7 @@ import BaseLayout from "@/components/BaseLayout";
 import HeaderElement from "@/components/header/HeaderElement";
 
 export default {
-  name: "PersonalPage",
+  name: "CatalogPage",
   components: {
     BaseLayout,
     HeaderElement
