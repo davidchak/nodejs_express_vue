@@ -2,7 +2,6 @@ const passport = require("passport");
 const Strategy = require("passport-http-bearer").Strategy;
 const db = require(global.appRoot + "/db");
 
-// Pasport strategy
 passport.use(
   new Strategy(function (token, cb) {
     db.findByToken(token, function (err, user) {
