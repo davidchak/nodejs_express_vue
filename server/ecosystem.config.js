@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "NODE_TEMPLATE",
-      script: "server",
+      script: "./bin/www",
 
       // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
       // args: 'one two',
