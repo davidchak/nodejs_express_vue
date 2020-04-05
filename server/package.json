@@ -14,10 +14,9 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start ./ecosystem.config.js --env 'production'",
+    "start": "npm install && pm2 start ./ecosystem.config.js --env 'production'",
     "dev": "pm2 start ./bin/www --watch",
-    "stop": "pm2 stop ./bin/www && pm2 delete ./server",
-    "install": "npm install"
+    "stop": "pm2 stop ./bin/www && pm2 delete ./server"
   },
   "autor": "David Chakiryan",
   "license": "MIT"
