@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-// import { Home } from './modules/home.js'
-// import { Config } from './modules/config.js'
+import { Auth } from './modules/auth.js'
+import { Cart } from './modules/cart.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
-    // store_home: Home,
-    // store_config: Config,
+    store_auth: Auth,
+	store_cart: Cart,
   },
 })

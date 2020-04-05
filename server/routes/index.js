@@ -1,8 +1,9 @@
 const router = require("express").Router();
+const passport = require(global.appRoot + "/middlewares/auth.js");
 
-// router.use("/", require("./main/index"))
-// router.use("/auth", require("./auth"))
-router.use("/api", require("./api"))
-// router.use("/user", require("./user"))
+router.use("/", require("./front"))
+
+router.use("/api", passport.authenticate('bearer', { session: false }), require("./api"))
+
 
 module.exports = router;

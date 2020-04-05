@@ -1,42 +1,36 @@
 <template>
-  <div class="page">
-    <header class="page__header">
+  <base-layout>
+    <!-- Header -->
+    <template v-slot:header>
       <header-element></header-element>
-    </header>
-      
+    </template>
 
     <!-- Content -->
-    <div class="container">
-      <div class="page__content row">
-        <div class="content__block">
-          <div class="wrapper">
-            <span>Content 1</span>
-          </div>
+    <template v-slot:content>
+      <div class="content__block">
+        <div class="wrapper">
+          <span>Index page</span>
         </div>
       </div>
+    </template>
 
-      <div class="page__content row">
-        <div class="content__block">
-          <div class="wrapper">
-            <span>Content 2</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  </div>
+    <!-- Footer -->
+    <template v-slot:footer></template>
+  </base-layout>
 </template>
 
 <script>
+import BaseLayout from "@/components/BaseLayout";
 import HeaderElement from "@/components/header/HeaderElement";
+
 export default {
   name: "IndexPage",
   components: {
-      HeaderElement
+    BaseLayout,
+    HeaderElement
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
-
 </style>
