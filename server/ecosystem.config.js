@@ -2,21 +2,21 @@ module.exports = {
   apps: [
     {
       name: "NODE_TEMPLATE",
-      script: "server",
+      script: "./bin/www",
 
       // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
       // args: 'one two',
-      instances: 4,
+      instances: 2,
       autorestart: true,
       watch: false,
       max_memory_restart: "200G",
       env: {
-        NODE_ENV: "development"
+        NODE_ENV: "development",
       },
       env_production: {
-        NODE_ENV: "production"
-      }
-    }
+        NODE_ENV: "production",
+      },
+    },
   ],
 
   deploy: {
@@ -27,7 +27,7 @@ module.exports = {
       repo: "https://github.com/davidchak/nodejs_express_vue.git",
       path: "/var/www/production",
       "post-deploy":
-        "npm install && pm2 reload ecosystem.config.js --env production"
-    }
-  }
+        "npm install && pm2 reload ecosystem.config.js --env production",
+    },
+  },
 };
